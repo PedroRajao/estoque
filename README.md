@@ -1,8 +1,5 @@
 ## USAGE
 
-Run the following SQL statement in your local MySQL: <br>
-`Create schema estoque_laravel;`
-
 To resolve project's dependencies :<br>
 `composer install`
 
@@ -15,6 +12,10 @@ DB_DATABASE=estoque_laravel
 DB_USERNAME=root
 DB_PASSWORD=xxx 
 ```
+
+Run the following SQL statement in your local MySQL: <br>
+`Create schema estoque_laravel;`
+
 Execute the following command to run the migrations:<br>
 `php artisan migrate`
 
