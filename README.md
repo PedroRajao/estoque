@@ -3,7 +3,7 @@
 Run the following SQL statement in your local MySQL: <br>
 `Create schema estoque_laravel;`
 
-To resolve project's dependencies :
+To resolve project's dependencies :<br>
 `composer install`
 
 Open .env in the project root.<br>
