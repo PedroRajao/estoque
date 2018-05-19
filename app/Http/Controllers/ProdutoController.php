@@ -1,7 +1,10 @@
-<?php namespace estoque\Http\Controllers;
+<?php 
+
+namespace estoque\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Validator;
 use estoque\Produto;
 
 class ProdutoController extends Controller
@@ -9,6 +12,7 @@ class ProdutoController extends Controller
     public function lista()
     {
         $produtos = Produto::all();
+
         return view('produto.listagem')->withProdutos($produtos);
     }
 
@@ -36,15 +40,31 @@ class ProdutoController extends Controller
         return view('produto.formulario');
     }
 
-    public function adiciona()
-    {
-        Produto::create(Request::all());
-        return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
-    }
+   
 
-    public function listaJson()
-    {
-        $produtos = DB::select('select * from produtos');
-        return response()->json($produtos);
+    public function adiciona(){
+
+        $validator = Validator::make(
+             [
+              'nome' => Request::input('nome'),
+              'valor' => Request::input('valor'),
+              'descricao' => Request::input('descricao'),              
+              'quantidade' => Request::input('quantidade')
+             ],
+             [
+              'nome' => 'required|min:5',
+              'valor' => 'required|numeric',              
+              'descricao' => 'required|max:255',
+              'quantidade' => 'required|numeric'
+             ]
+        );
+
+        if ($validator->fails()){
+          return redirect()-> action('ProdutoController@novo')->withErrors($validator);
+        }
+
+        Produto::create(Request::all());
+        return redirect()-> action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
+    
 }

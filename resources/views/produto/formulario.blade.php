@@ -2,6 +2,16 @@
 
 @section('conteudo')
 
+@if (count($errors) > 0)
+  <div class="alert alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
+
 <h1>Novo produto</h1>
 
 <form action="/produtos/adiciona" method="post">
@@ -35,6 +45,11 @@
 
     <button class="btn btn-primary" type="submit">Adicionar</button>
 
+
+
 </form>
+
+
+
 
 @stop
