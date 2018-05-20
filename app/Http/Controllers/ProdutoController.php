@@ -60,11 +60,11 @@ class ProdutoController extends Controller
         );
 
         if ($validator->fails()){
-          return redirect()-> action('ProdutoController@novo')->withErrors($validator);
+          return redirect()-> action('ProdutoController@novo')->withErrors($validator)->withInput(Request::flash());
         }
 
         Produto::create(Request::all());
         return redirect()-> action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
-    
+
 }
