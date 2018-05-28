@@ -16,7 +16,7 @@ DB_PASSWORD=xxx
 Run the following SQL statement in your local MySQL: <br>
 `Create schema estoque_laravel;`
 
-Execute the following command to run the migrations <b>OR</b> use SQL in the _dump<br>
+Execute the following command to run the migrations <b>OR</b> use SQL in the _dump for database creation<br>
 `php artisan migrate`
 
 ## License
