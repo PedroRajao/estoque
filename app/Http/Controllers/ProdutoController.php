@@ -9,18 +9,10 @@ use estoque\Produto;
 
 class ProdutoController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+  
 
     public function lista()
-    {
+    {        
         $produtos = Produto::all();
 
         return view('produto.listagem')->withProdutos($produtos);
@@ -38,7 +30,7 @@ class ProdutoController extends Controller
     }
 
     public function remove($id)
-    {
+    {        
         $produto = Produto::find($id);
         $produto->delete();
 
