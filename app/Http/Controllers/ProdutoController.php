@@ -9,6 +9,16 @@ use estoque\Produto;
 
 class ProdutoController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function lista()
     {
         $produtos = Produto::all();
