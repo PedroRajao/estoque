@@ -9,50 +9,50 @@
     <input type="hidden" name="_token" value="{{csrf_token()}}" />
 
     <div class-"form-group">
-    <label>Nome</label>
-    <input name="nome" class="form-control" value="{{ old('nome') }}" />
+         <label>Nome</label>
+        <input name="nome" class="form-control" value="{{ old('nome') }}" />
     </div>
 
     <div class-"form-group">
-    <label>Valor</label>
-    <input name="valor" value="{{ old('valor') }}" class="form-control"/>
+         <label>Valor</label>
+        <input name="valor" value="{{ old('valor') }}" class="form-control"/>
     </div>
 
     <div class-"form-group">
-    <label>Quantidade</label>
-    <input name="quantidade" value="{{ old('quantidade') }}" class="form-control"/>
+         <label>Quantidade</label>
+        <input name="quantidade" value="{{ old('quantidade') }}" class="form-control"/>
     </div>
 
     <div class-"form-group">
-        <label>Tamanho</label>
+         <label>Tamanho</label>
         <input name="tamanho" value="{{ old('tamanho') }}" class="form-control"/>
-        </div>
+    </div>
 
     <div class-"form-group">
-    <label>Descrição</label>
-    <textarea name="descricao" value="{{ old('descricao') }}" class="form-control"></textarea>
+         <label>Descrição</label>
+        <textarea name="descricao" value="{{ old('descricao') }}" class="form-control"></textarea>
     </div>
 
     <div class="form-group">
-    <label>Categoria</label>
-      <select name="categoria_id" class="form-control">
-          @foreach($categorias as $c)
-          <option value="{{$c->id}}">{{$c->nome}}</option>
-          @endforeach
-      </select>
+        <label>Categoria</label>
+        <select name="categoria_id" class="form-control">
+            @foreach($categorias as $c)
+            <option value="{{$c->id}}">{{$c->nome}}</option>
+            @endforeach
+        </select>
     </div>
 
     <button class="btn btn-primary" type="submit">Adicionar</button>
 </form>
 
 @if (count($errors) > 0)
-  <div class="alert alert-danger">
+<div class="alert alert-danger">
     <ul>
-      @foreach ($errors->all() as $error)
+        @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
-      @endforeach
+        @endforeach
     </ul>
-  </div>
+</div>
 @endif
 
 @stop

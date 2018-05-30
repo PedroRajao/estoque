@@ -1,6 +1,7 @@
-<?php 
+<?php
 
 namespace estoque\Http\Requests;
+
 use estoque\Http\Requests\Request;
 
 class ProdutosRequest extends Request {
@@ -11,8 +12,7 @@ class ProdutosRequest extends Request {
      *
      * @return bool
      */
-    public function authorize()
-    {
+    public function authorize() {
         return true;
     }
 
@@ -22,12 +22,12 @@ class ProdutosRequest extends Request {
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-           'nome' => 'required|max:100',
-           'descricao' => 'required|max:255',
-           'valor' => 'required|numeric'
+            'nome' => 'required|max:100',
+            'descricao' => 'required|max:255',
+            'valor' => 'required|numeric'
         ];
     }
+
 }

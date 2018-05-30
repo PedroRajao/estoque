@@ -2,15 +2,15 @@
 
 @section('conteudo')
 
-    @if (empty($produtos))
-    <div class="alert alert-danger">Você não tem nenhum produto cadastrado.</div>
+@if (empty($produtos))
+<div class="alert alert-danger">Você não tem nenhum produto cadastrado.</div>
 
-    @else
-    <h1>Listagem de produtos com Laravel</h1>
+@else
+<h1>Listagem de produtos com Laravel</h1>
 
-    <table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover">
 
-        <thead class="thead-dark">
+    <thead class="thead-dark">
         <tr> 
             <th scope="col">Nome</td>
             <th scope="col">Valor</th>
@@ -38,17 +38,17 @@
         @endforeach
 
     </tbody>
-    </table>
-    
-    @endif
+</table>
 
-    @if (old('nome'))
-    <div class="alert alert-success">
-        Produto {{old('nome')}} adicionado com sucesso!
-    </div>
-    @endif
+@endif
 
-    <h4>
-        <span class="badge badge-danger float-right">Um ou menos itens no estoque</span>
-    </h4>
+@if (old('nome'))
+<div class="alert alert-success">
+    Produto {{old('nome')}} adicionado com sucesso!
+</div>
+@endif
+
+<h4>
+    <span class="badge badge-danger float-right">Um ou menos itens no estoque</span>
+</h4>
 @stop

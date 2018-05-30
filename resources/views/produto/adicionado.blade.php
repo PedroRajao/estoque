@@ -2,7 +2,7 @@
 
 @section('conteudo')
 
-    <div class="alert alert-success">
+<div class="alert alert-success">
     Produto {{$nome}} adicionado com sucesso!
-    </div>
+</div>
 @stop
