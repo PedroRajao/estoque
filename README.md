@@ -3,8 +3,7 @@
 To resolve project's dependencies :<br>
 `composer install`
 
-Open .env in the project root.<br>
-Set the configurations as shown below:
+Copy the <i>.env.example</i> to <i>.env</i> and set the configurations as shown below:
 
 ``` 
 DB_HOST=localhost
