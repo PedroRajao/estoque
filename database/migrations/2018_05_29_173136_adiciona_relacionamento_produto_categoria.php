@@ -4,15 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AdicionaRelacionamentoProdutoCategoria extends Migration {
+class AdicionaRelacionamentoProdutoCategoria extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
-        Schema::table('produtos', function(Blueprint $table) {
+    public function up()
+    {
+        Schema::table('produtos', function (Blueprint $table) {
             $table->integer('categoria_id')->default(1);
         });
     }
@@ -22,10 +24,10 @@ class AdicionaRelacionamentoProdutoCategoria extends Migration {
      *
      * @return void
      */
-    public function down() {
-        Schema::table('produtos', function(Blueprint $table) {
+    public function down()
+    {
+        Schema::table('produtos', function (Blueprint $table) {
             $table->dropColumn('categoria_id');
         });
     }
-
 }

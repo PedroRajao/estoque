@@ -5,7 +5,8 @@ namespace estoque\Http\Controllers\Auth;
 use estoque\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
-class ForgotPasswordController extends Controller {
+class ForgotPasswordController extends Controller
+{
     /*
       |--------------------------------------------------------------------------
       | Password Reset Controller
@@ -17,15 +18,15 @@ class ForgotPasswordController extends Controller {
       |
      */
 
-use SendsPasswordResetEmails;
+    use SendsPasswordResetEmails;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('guest');
     }
-
 }

@@ -5,7 +5,8 @@ namespace estoque\Http\Middleware;
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;
 
-class TrustProxies extends Middleware {
+class TrustProxies extends Middleware
+{
 
     /**
      * The trusted proxies for this application.
@@ -26,5 +27,4 @@ class TrustProxies extends Middleware {
         Request::HEADER_X_FORWARDED_PORT => 'X_FORWARDED_PORT',
         Request::HEADER_X_FORWARDED_PROTO => 'X_FORWARDED_PROTO',
     ];
-
 }

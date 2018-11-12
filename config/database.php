@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
       |--------------------------------------------------------------------------
       | Default Database Connection Name
@@ -30,7 +29,6 @@ return [
       |
      */
     'connections' => [
-
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
@@ -95,7 +93,6 @@ return [
       |
      */
     'redis' => [
-
         'client' => 'predis',
         'default' => [
             'host' => env('REDIS_HOST', '127.0.0.1'),

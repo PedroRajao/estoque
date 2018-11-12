@@ -5,7 +5,8 @@ namespace estoque\Http\Controllers\Auth;
 use estoque\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-class LoginController extends Controller {
+class LoginController extends Controller
+{
     /*
       |--------------------------------------------------------------------------
       | Login Controller
@@ -17,7 +18,7 @@ class LoginController extends Controller {
       |
      */
 
-use AuthenticatesUsers;
+    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
@@ -31,8 +32,8 @@ use AuthenticatesUsers;
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('guest')->except('logout');
     }
-
 }

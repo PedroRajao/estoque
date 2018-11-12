@@ -5,7 +5,8 @@ namespace estoque\Http\Controllers\Auth;
 use estoque\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
-class ResetPasswordController extends Controller {
+class ResetPasswordController extends Controller
+{
     /*
       |--------------------------------------------------------------------------
       | Password Reset Controller
@@ -17,7 +18,7 @@ class ResetPasswordController extends Controller {
       |
      */
 
-use ResetsPasswords;
+    use ResetsPasswords;
 
     /**
      * Where to redirect users after resetting their password.
@@ -31,8 +32,8 @@ use ResetsPasswords;
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('guest');
     }
-
 }
