@@ -1,5 +1,6 @@
 ## USAGE
 
+### Application
 To resolve project's dependencies :<br>
 `composer install`
 
@@ -12,12 +13,20 @@ DB_USERNAME=root
 DB_PASSWORD=xxx 
 ```
 
+Generate project's key <br>
+```php artisan key:generate```
+
+Start server <br>
+```php artisan serve```
+
+### Database
+
 Run the following SQL statement in your local MySQL: <br>
 `Create schema estoque_laravel;`
 
 Execute the following command to run the migrations <b>OR</b> use SQL in the _dump for database creation<br>
 `php artisan migrate`
 
-## License
+### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
