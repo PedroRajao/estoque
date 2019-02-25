@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-
+        
         @foreach ($produtos as $p)
         <tr class="table-{{ $p->quantidade <=1 ? 'danger' : ''}}"> 
             <td>{{$p->nome}}</td>
@@ -48,7 +48,7 @@
 </div>
 @endif
 
-<h4>
+<!-- <h4>
     <span class="badge badge-danger float-right">Um ou menos itens no estoque</span>
-</h4>
+</h4> -->
 @stop

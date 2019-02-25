@@ -47,7 +47,7 @@ class ProdutoController extends Controller
     public function adiciona()
     {
         $validator = Validator::make(
-                [
+            [
                 'nome' => Request::input('nome'),
                 'valor' => Request::input('valor'),
                 'descricao' => Request::input('descricao'),
@@ -56,7 +56,7 @@ class ProdutoController extends Controller
             [
                 'nome' => 'required|min:5',
                 'valor' => 'required|numeric',
-                'descricao' => 'required|max:255',
+                'descricao' => 'nullable|max:255',
                 'quantidade' => 'required|numeric'
                 ]
         );
