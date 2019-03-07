@@ -12,3 +12,4 @@ Homestead.json
 Homestead.yaml
 .env
 /nbproject
+.php_cs.cache
