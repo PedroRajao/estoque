@@ -7,10 +7,10 @@ To resolve project's dependencies :<br>
 Make a copy of <i>.env.example</i> and name it <i>.env</i> and set the configurations as shown below:
 
 ``` 
-DB_HOST=localhost
-DB_DATABASE=estoque_laravel
-DB_USERNAME=root
-DB_PASSWORD=xxx 
+DB_HOST = localhost
+DB_DATABASE = estoque_laravel
+DB_USERNAME = { YOUR DB USERNAME }
+DB_PASSWORD = { YOUR DB PASSWORD }
 ```
 
 Generate project's key <br>
