@@ -27,13 +27,13 @@
         @foreach ($produtos as $p)
         <tr class="table-{{ $p->quantidade <=1 ? 'danger' : ''}}"> 
             <td>{{$p->nome}}</td>
-            <td>{{$p->valor}}</td>
+            <td>R$ {{$p->valor}}</td>
             <td>{{$p->descricao}}</td>
             <td>{{$p->quantidade}}</td>
-            <td>{{$p->tamanho}}</td>
-            <td>{{$p->categoria->nome}}</td>
-            <td><a href="/produtos/mostra/{{$p->id}}"><i class="material-icons">search</i></a></td>
-            <td><a href="/produtos/remove/{{$p->id}}"><i class="material-icons">delete</i></a></td>
+            <td>{{$p->tamanho}} cm</td>
+            <td>{{$p->categoria["nome"]}}</td>
+            <td><a href="/produtos/mostra/{{$p->ID}}"><i class="material-icons">search</i></a></td>
+            <td><a href="/produtos/remove/{{$p->ID}}"><i class="material-icons">delete</i></a></td>
         </tr>
         @endforeach
 
